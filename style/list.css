@@ -1,0 +1,171 @@
+@charset "UTF-8";
+html > body {
+	font-family: "GmarketSansMedium";
+	font-weight: bold;
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+}
+
+.section {
+	flex-grow: 1;
+}
+
+/* 아이템 리스트 구현 시작 */
+.showItems-content-box {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+}
+.showItems__search-box {
+    min-width: 20%;
+    padding: 30px;
+    font-size: 20px;
+    border: 1px solid #eee;
+}
+.showItems__search-box input, .showItems__search-box select {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid #eee;
+}
+.showItems__search-box button {
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    color: #eee;
+    border-radius: 10px;
+    background-color: #399b9b;
+    padding: 20px 0px;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+.showItems__search-box button:hover {
+    background-color: #7fcdcd;
+}
+.showItems__search-box select {
+    width: 100%;
+    height: 40px;
+}
+.showItems__search-box .choice-box ul {
+    flex-wrap: wrap;
+}
+.showItems__search-box .choice-box li {
+    margin-right: 5px;
+}
+.showItems__search-box .choice-box input {
+    display: inline-block;
+    margin-right: 5px;
+}
+.showItems__search-box .choice-box img {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+.showItems__search-box .search-box-name {
+    display: block;
+    margin: 20px 0;
+}
+.showItems__items-box {
+    margin-left: 20px;
+    width: 100%;
+}
+.showItems__items-box h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.showItems__items-box ul {
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.showItems__items-box .product-box {
+    font-size: 12px;
+    padding-top: 20px;
+    width: 190px;
+    height: 400px;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    transition: all 0.5s;
+    margin-left: 7px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+.showItems__items-box .product-box .product-img {
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+}
+.showItems__items-box .product-box .product-img img {
+    width: 100%;
+    height: 95%;
+    object-fit: contain;
+    transition: all 0.5s;
+}
+.showItems__items-box .product-box .product-img img:hover {
+    transform: scale(1.1);
+}
+.showItems__items-box .product-box .product-name {
+    width: 100%;
+    height: 12%;
+}
+.showItems__items-box .product-box .product-detail {
+    width: 100%;
+    justify-content: space-between;
+}
+.showItems__items-box .product-box .product-detail .product-price {
+    margin-left: 10px;
+}
+.showItems__items-box .product-box .product-detail .product-inventory {
+    margin-right: 20px;
+}
+.showItems__items-box .product-box .product-shop {
+    text-align: center;
+    margin-top: 10px;
+}
+.showItems__items-box .product-box .product-shop a {
+    margin: 0 auto;
+    font-size: 12px;
+    display: block;
+    width: 80%;
+    color: #eee;
+    border-radius: 15px;
+    background-color: #019875;
+    padding: 5px;
+    transition: all 0.5s;
+}
+.showItems__items-box .product-box .product-shop a i {
+    margin-right: 10px;
+}
+.showItems__items-box .product-box .product-shop a:hover {
+    color: #019875;
+    background-color: #eee;
+}
+.showItems__items-box .items-number {
+    margin-top: 20px;
+}
+.showItems__items-box .items-number ul li.active {
+    color: #7fcdcd;
+}
+.showItems__items-box .items-number ul li {
+    margin-right: 20px;
+}
+/* 아이템 리스트 구현 끝 */
+/* 아이템 리스트 반응현 구현 시작 */
+@media (width < 700px) {
+    .showItems-content-box {
+        flex-direction: column;
+   }
+    .showItems-content-box .showItems__search-box {
+        font-size: 14px;
+        width: 100%;
+        padding: 10px;
+   }
+    .showItems-content-box .showItems__search-box .search-box-name {
+        margin: 10px 0;
+   }
+    .showItems-content-box .showItems__items-box {
+        width: 100%;
+   }
+}
+/* 아이템 리스트 반응현 구현 끝 */

@@ -1,0 +1,236 @@
+html > body {
+  font-family: "GmarketSansMedium";
+  font-weight: bold;
+  font-size: 18px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* URL 루트 구현 시작 */
+.urlPath {
+  font-size: 14px;
+  color: #888;
+  margin: 20px 10px;
+}
+.urlPath ul li {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.urlPath ul li::after {
+  content: " >";
+  margin: 0 5px;
+  display: inline-block;
+  text-decoration: none;
+}
+.urlPath ul li:last-child::after {
+  content: "";
+}
+/* URL 루트 구현 끝 */
+/* 세부 아이템 구현 시작 */
+.cardDesc__card-desc-box {
+  display: block;
+  width: 50%;
+  height: 100%;
+  border: 1px solid #eee;
+  margin-bottom: 100px;
+}
+.cardDesc__card-desc-box .card-img-box {
+  height: 700px;
+  width: 80%;
+  margin: 40px auto;
+  cursor: pointer;
+}
+.cardDesc__card-desc-box .card-img-box img {
+  width: 100%;
+  height: 100%;
+}
+.cardDesc__card-desc-box .card-detail {
+  width: 100%;
+  display: flex;
+  font-weight: 500;
+}
+.cardDesc__card-desc-box .card-detail ul {
+  width: 100%;
+}
+.cardDesc__card-desc-box .card-detail ul li {
+  display: flex;
+  border: 1px solid #eee;
+  min-height: 50px;
+  align-items: center;
+}
+.cardDesc__card-desc-box .card-detail ul li .left-box {
+  font-weight: 700;
+  width: 100px;
+  margin-left: 50px;
+}
+.cardDesc__card-desc-box .card-detail ul li .right-box {
+  width: 100%;
+  text-align: left;
+  margin: 10px;
+}
+.cardDesc__card-desc-box .card-detail ul li:last-child .right-box {
+  font-size: 13px;
+}
+.cardDesc__card-desc-box .card-detail img {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.cardDesc__card-purchase-box {
+  position: fixed;
+  z-index: 10;
+  left: 50%;
+  margin-left: 50px;
+  width: 500px;
+  height: 550px;
+  display: block;
+  border: 1px solid #eee;
+  font-weight: 500;
+  transition: transform 2s ease;
+}
+.cardDesc__card-purchase-box .purchase-title-text {
+  padding-left: 20px;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+.cardDesc__card-purchase-box .purchase-detail {
+  font-size: 20px;
+  margin: 20px;
+}
+.cardDesc__card-purchase-box .purchase-detail .detail {
+  margin: 10px 0;
+}
+.cardDesc__card-purchase-box .purchase-detail .price span {
+  font-size: 30px;
+}
+.cardDesc__card-purchase-box .purchase-detail .inventory span {
+  font-size: 30px;
+}
+.cardDesc__card-purchase-box .purchase-detail select {
+  font-size: 20px;
+  width: 80%;
+  height: 30px;
+  border: 1px solid #eee;
+  font-weight: 500;
+}
+.cardDesc__card-purchase-box .btn-box {
+  margin-top: 20px;
+  justify-content: space-around;
+  color: #fff;
+}
+.cardDesc__card-purchase-box .btn-box .purchase-btn a {
+  background-color: #7fcdcd;
+}
+.cardDesc__card-purchase-box .btn-box .cart-btn a {
+  background-color: #019875;
+}
+.cardDesc__card-purchase-box .btn-box .cart-btn a i {
+  margin-right: 20px;
+}
+.cardDesc__card-purchase-box .btn-box .btn a {
+  border-radius: 25px;
+  display: block;
+  padding: 15px 80px;
+}
+.cardDesc__card-purchase-box .btn-box .btn a:hover {
+  transition: all 0.5s;
+  color: #222;
+  filter: brightness(120%);
+}
+.cardDesc__card-purchase-box .counter-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+.cardDesc__card-purchase-box button {
+  padding: 5px 50px;
+  font-size: 30px;
+  border: 1px solid #eee;
+  color: #000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.cardDesc__card-purchase-box button:active {
+  filter: brightness(120%);
+}
+.cardDesc__card-purchase-box .number-display {
+  margin: 0 20px;
+  font-size: 24px;
+  width: 50px;
+  text-align: center;
+}
+.cardDesc__card-purchase-box.scroll-block {
+  position: absolute;
+  bottom: 10px;
+}
+/* 세부 아이템 구현 끝 */
+/* 상품 슬라이드 구현 시작 */
+.productSlide .swiper {
+  width: 1200px;
+  height: 500px;
+}
+.productSlide .swiper-button {
+  color: #000;
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  width: 20px;
+  height: 20px;
+  background-size: 100%;
+}
+.productSlide .swiper-button::after {
+  font-size: 25px;
+}
+.productSlide .swiper-button-next {
+  left: 95%;
+}
+.productSlide .swiper-slide .product-box {
+  padding-top: 20px;
+  width: 300px;
+  height: 400px;
+  box-sizing: border-box;
+  transition: all 0.5s;
+  border: 1px solid #eee;
+}
+.productSlide .swiper-slide .product-box .product-img {
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+}
+.productSlide .swiper-slide .product-box .product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.5s;
+}
+.productSlide .swiper-slide .product-box .product-img img:hover {
+  transform: scale(1.1);
+}
+.productSlide .swiper-slide .product-box .product-name {
+  margin-top: 10px;
+  width: 100%;
+  height: 20%;
+}
+.productSlide .swiper-slide .product-box .product-detail {
+  width: 100%;
+  height: 10%;
+  justify-content: space-between;
+}
+.productSlide .swiper-slide .product-box .product-detail .product-price {
+  margin-left: 10px;
+}
+.productSlide .swiper-slide .product-box .product-detail .product-left {
+  margin-right: 20px;
+}
+.productSlide .swiper-slide .product-box:hover {
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px #444;
+}
+/* 상품 슬라이드 구현 끝 */
